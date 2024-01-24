@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { App } from 'components/App';
 
@@ -16,9 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <BrowserRouter basename="/phone-book">
+          <Router basename="/phone-book">
             <App />
-          </BrowserRouter>
+          </Router>
         </PersistGate>
        </Provider>
   </React.StrictMode>
