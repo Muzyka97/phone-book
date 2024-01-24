@@ -1,4 +1,3 @@
-// import {Box} from '../Box/Box';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/sliceFilter';
 import { useEffect } from 'react';
@@ -47,31 +46,18 @@ const PhoneBook = () =>{
     };
 
     return(
-        // ml='20px'
-        // mt='20px'
-        // width='550px'
-        <Box sx={{p: 5}}>
+        <Box p={5}>
             <Section title="PhoneBook">
-            {/* border={'normal'}
-                paddingLeft='8px'
-                paddingRight='40px'
-                paddingTop='8px'
-                paddingBottom="20px" */}
                 <Box component='div'>
                     <Form onSubmit={addContact}/>
                 </Box>
             </Section>
             <Section title='Contacts'>
-            {/* paddingLeft='8px'
-                    paddingRight='40px'
-                    paddingTop='8px'
-                    paddingBottom="40px" */}
                 <Box  component='div'
                        m="auto"
-                       sx={{     
-                           width: 700,
-                           padding: 1,
-                       }}>
+                       p={1}
+                       width={700}
+                    >
                     <Filter filter={filter} changeFilter={changeFilter}/>
                     <ContactsList contacts={getFilteredContacts()} deleteContacts={deleteContact}/>
                 </Box>

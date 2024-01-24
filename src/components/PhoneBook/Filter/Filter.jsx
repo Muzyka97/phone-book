@@ -1,12 +1,6 @@
 import PropTypes from 'prop-types'; 
 import {Box, TextField} from '@mui/material';
 
-// import styled from 'styled-components';
-
-// const InputSpaceFilter = styled.input`
-//     margin-top: ${p=>p.theme.space[3]}px;
-// `
-
 const Filter = ({filter, changeFilter}) =>{
     return(
         <Box>

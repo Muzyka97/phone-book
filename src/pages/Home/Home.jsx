@@ -5,11 +5,11 @@ const Home = () => {
       <Box
         display='flex'
         justifyContent="center"
-        sx={{pt: 30}}
+        pt={20} 
       >
         <Typography variant="h2" gutterBottom>
           Привіт! Це сторінка Home!{' '}
-          <span role="img" aria-label="іконка">
+          <span role="img" aria-label="icon">
             💁‍♀️
           </span>
         </Typography>

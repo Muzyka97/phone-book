@@ -6,17 +6,6 @@ import { logIn } from 'redux/auth/authOperation';
 import Button from 'shared/ButtonShared';
 
 
-// const styles = {
-//   form: {
-//     width: 320,
-//   },
-//   label: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     marginBottom: 15,
-//   },
-// };
-
 const Login = () => {
 const dispach = useDispatch();
 const [email, setEmail] = useState('');
@@ -42,7 +31,7 @@ const handleSubmit = e => {
 
   return (
         <Box component='div'
-             sx={{pt: 20}}>
+             pt={15}>
           <Typography textAlign='center' variant="h2" gutterBottom>
             Сторінка логіна
           </Typography>
@@ -51,12 +40,10 @@ const handleSubmit = e => {
             m="auto"
             component='form' 
             onSubmit={handleSubmit}  
-            autoComplete="off"
-            sx={{     
-              width: 700,
-              height: 500,
-              padding: 1,
-            }}
+            autoComplete="on"
+            width="700px"
+            height='500px'
+            p={1}
           >
           <TextField 
             id="standard-basic" 
@@ -86,7 +73,7 @@ const handleSubmit = e => {
                 component='span'
                 display='flex' 
                 justifyContent="center"
-                sx={{mt: 5}}>
+                mt={5}>
               <Button  type={"submit"}>Вхід</Button>
             </Box>
           </Box>

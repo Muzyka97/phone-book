@@ -6,17 +6,6 @@ import { Typography,Box,TextField } from '@mui/material';
 
 import Button from 'shared/ButtonShared';
 
-// const styles = {
-//     form: {
-//       width: 320,
-//     },
-//     label: {
-//       display: 'flex',
-//       flexDirection: 'column',
-//       marginBottom: 15,
-//     },
-// };
-
 const Register = () => {
     const dispach = useDispatch();
     const [name, setName] = useState('');
@@ -45,7 +34,7 @@ const handleSubmit = e => {
 };
 
     return(
-        <Box  sx={{pt: 20}}>
+        <Box pt={15}>
           <Typography textAlign='center' variant="h2" gutterBottom>
              Сторінка для реєстрації
           </Typography>
@@ -55,12 +44,10 @@ const handleSubmit = e => {
             m="auto"
             component='form' 
             onSubmit={handleSubmit}  
-            autoComplete="off"
-            sx={{     
-              width: 700,
-              height: 500,
-              padding: 1
-            }}
+            autoComplete="on"
+            width="700px"
+            height='500px'
+            p={1}
           >
             <TextField 
             id="name" 
@@ -102,7 +89,7 @@ const handleSubmit = e => {
                 component='span'
                 display='flex' 
                 justifyContent="center"
-                sx={{mt: 5}}>
+                mt={5}>
             <Button type={"submit"}>Зареєструватися</Button>
           </Box>
         </Box>

@@ -1,23 +1,8 @@
 import {Box, Link} from '@mui/material'
-// const styles = {
-//   container:{
-//     marginLeft: 1050,
-//   },
-//   link: {
-//     display: 'inline-block',
-//     textDecoration: 'none',
-//     padding: 12,
-//     fontWeight: 700,
-//     color: '#2A363B',
-//   },
-//   activeLink: {
-//     color: '#E84A5F',
-//   },
-// };
 
 const AuthNav = () => {
-    return(
-        <Box>
+  return(
+    <Box>
       <Link
         href="/register"
         color="inherit"
@@ -35,7 +20,7 @@ const AuthNav = () => {
         Логін
       </Link>
     </Box>
-    )
+  )
 };
 
 export default AuthNav;

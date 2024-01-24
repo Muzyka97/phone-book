@@ -1,4 +1,3 @@
-// import styled from 'styled-components';
 import {Box, TextField} from '@mui/material';
 import PropTypes from 'prop-types'; 
 
@@ -6,15 +5,6 @@ import useForm from 'hooks/useForm';
 import Button from 'shared/ButtonShared';
 
 import {initialState} from './initialState';
-
-
-// const FormItem = styled.form`
-//     padding: 0px;
-// `;
-// const InputSpaceForm = styled.input`
-//     margin-top: ${p=>p.theme.space[3]}px;
-//     margin-bottom: ${p=>p.theme.space[3]}px;
-// `;
 
 const Form = ({ onSubmit })=> {
 
@@ -26,15 +16,13 @@ const Form = ({ onSubmit })=> {
     const { name, number } = state;
 
     return(
-        <Box sx={{mb: 8}}>
+        <Box mb={8}>
             <Box 
                 component='form' 
                 m="auto"
-                onSubmit={handleSubmitForm}
-                sx={{     
-                    width: 700,
-                    padding: 1,
-                }}
+                onSubmit={handleSubmitForm}                 
+                    width={700} 
+                    p={1}
                 >
                 <TextField
                     id="standard-name" 
@@ -65,7 +53,7 @@ const Form = ({ onSubmit })=> {
                   component='span'
                   display='flex' 
                   justifyContent="center"
-                  sx={{mt: 5}}
+                  mt={5}
                   >    
                     <Button type={"submit"}>Додати контакт</Button>
                 </Box>

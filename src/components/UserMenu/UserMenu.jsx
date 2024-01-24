@@ -8,30 +8,6 @@ import Button from 'shared/ButtonShared';
 import { logOut } from 'redux/auth/authOperation';
 import {getUserName} from '../../redux/auth/authSelectors';
 
-// const styles = {
-//     container: {
-//       display: 'flex',
-//       alignItems: 'center',
-//       marginLeft: 1050,
-//     },
-//     avatar: {
-//       marginRight: 4,
-//     },
-//     name: {
-//       fontWeight: 700,
-//       marginRight: 12,
-//     },
-//     link: {
-//       display: 'inline-block',
-//       textDecoration: 'none',
-//       padding: 12,
-//       fontWeight: 700,
-//       color: '#2A363B',
-//     },
-//     activeLink: {
-//       color: '#E84A5F',
-//     },
-// };
 
 const UserMenu = () =>{
     const dispatch = useDispatch();
@@ -58,16 +34,17 @@ const UserMenu = () =>{
         alignItems='center'
         >
         <Avatar src={avatar} alt="user"
-          sx={{ mr: 1,
-          
-          }}/>
-        <span >Привіт,{name}!</span>
+         />
+        <Box 
+          ml={1}
+          >
+            Привіт,{name}!
+        </Box>
         <Box 
             component="span"
-            sx={{ mr: 5,
-                  ml: 5,
-                }}
-        >
+            mr={5}
+            ml={5}
+          >
           <Button type={"submit"} onPress={() => dispatch(logOut())}>Вийти</Button>
         </Box>
       </Box>

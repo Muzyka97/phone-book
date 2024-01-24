@@ -1,8 +1,8 @@
 {
-  "name": "react-phone-book-authentication",
+  "name": "phone-book",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://muzyka97.github.io/react-phone-book-authentication/",
+  "homepage": "https://github.com/Muzyka97/phone-book",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.10.6",
@@ -22,9 +22,6 @@
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
-    "styled-components": "^5.3.10",
-    "styled-system": "^5.1.5",
-    "theme-ui": "^0.15.7",
     "web-vitals": "^2.1.3"
   },
   "scripts": {

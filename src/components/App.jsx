@@ -1,9 +1,8 @@
-// import {Box} from './Box/Box'
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
-import { lazy} from "react";
+import { lazy } from "react";
 
 import { Box } from '@mui/material';
 
@@ -13,8 +12,6 @@ import Loader from "shared/Loader";
 import Header from "./Header";
 
 import { fetchCurrentUser } from "redux/auth/authOperation";
-
-
 
 const PhoneBook = lazy(()=>import('./PhoneBook'));
 const Login = lazy(()=>import('../pages/Login'));
@@ -31,7 +28,6 @@ export const App = () => {
   }, [dispatch]);
 
   if (isLoading) {
-   
     return <Loader />;
   }
 
