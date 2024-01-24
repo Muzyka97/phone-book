@@ -2,7 +2,7 @@
   "name": "phone-book",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Muzyka97/phone-book.git",
+  "homepage": "https://muzyka97.github.io/phone-book/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.10.6",
