@@ -38,7 +38,7 @@ const UserMenu = () =>{
         <Box 
           ml={1}
           >
-            Привіт,{name}!
+            Привіт, {name}!
         </Box>
         <Box 
             component="span"
