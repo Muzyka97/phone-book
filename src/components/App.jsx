@@ -37,11 +37,11 @@ export const App = () => {
         <Route path="/" element={<Header/>}>
           <Route index element={<Home/>}/>
           <Route element={<PublicRoute/>}>
-            <Route path="login" element={<Login/>}/>
-            <Route path="register" element= {<Register/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element= {<Register/>}/>
           </Route>
           <Route element={<PrivateRoute/> }>
-            <Route path="contacts" element={<PhoneBook/>}/>
+            <Route path="/contacts" element={<PhoneBook/>}/>
           </Route>
         </Route>
         <Route path="*" element={<Navigate to='/' replace/>}/>
