@@ -14,11 +14,7 @@ const useForm = ({initialState, onSubmit})=>{
         event.preventDefault()
         onSubmit({...state});
         setState({...initialState}); 
-        // reset();
     };
-        // reset=()=>{
-          // setState({name: '', number:''})
-         // };
 
     return{ state, setState, handleInputChange, handleSubmitForm}
 };

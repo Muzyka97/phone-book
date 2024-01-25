@@ -6,7 +6,7 @@ const PublicRoute = () =>{
     const isLoggedIn = useIsLogin();
     
     if(isLoggedIn ){
-        return <Navigate replace to="/phone-book/contacts" />;
+        return <Navigate replace to="/contacts" />;
     }
     return <Outlet/>
 };

@@ -5,7 +5,7 @@ const PrivateRoute = () =>{
     const isLoggedIn = useIsLogin();
 
     if(!isLoggedIn ){
-        return <Navigate to="/phone-book/register" />;
+        return <Navigate to="/register" />;
     }
     return <Outlet/>
   
