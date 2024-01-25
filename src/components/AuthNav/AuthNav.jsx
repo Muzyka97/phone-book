@@ -4,7 +4,7 @@ const AuthNav = () => {
   return(
     <Box>
       <Link
-        href="/register"
+        href="/phone-book/register"
         color="inherit"
         underline="none"
         mr={5}
@@ -13,7 +13,7 @@ const AuthNav = () => {
       </Link>
       <Link
         mr={5}
-        href="/login"
+        href="/phone-book/login"
         underline="none"
         color="inherit"
       >

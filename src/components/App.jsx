@@ -1,22 +1,23 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useDispatch } from "react-redux";
-import { lazy } from "react";
+import { useDispatch } from 'react-redux';
+import { lazy } from 'react';
 
 import { Box } from '@mui/material';
 
-import PrivateRoute from "shared/PrivateRoute";
-import PublicRoute from "shared/PublicRoute";
-import Loader from "shared/Loader";
-import Header from "./Header";
+import PrivateRoute from 'shared/PrivateRoute';
+import PublicRoute from 'shared/PublicRoute';
+import Loader from 'shared/Loader';
+import Header from './Header';
 
-import { fetchCurrentUser } from "redux/auth/authOperation";
+import { fetchCurrentUser } from 'redux/auth/authOperation';
 
-const PhoneBook = lazy(()=>import('./PhoneBook'));
-const Login = lazy(()=>import('../pages/Login'));
-const Register = lazy(()=>import('../pages/Register'));
-const Home = lazy(()=>import('../pages/Home'))
+const PhoneBook = lazy(() => import('./PhoneBook'));
+const Login = lazy(() => import('../pages/Login'));
+const Register = lazy(() => import('../pages/Register'));
+const Home = lazy(() => import('../pages/Home'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -33,23 +34,19 @@ export const App = () => {
 
   return (
     <Box>
-      <Routes>
+       <Routes>
         <Route path="/" element={<Header/>}>
           <Route index element={<Home/>}/>
           <Route element={<PublicRoute/>}>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element= {<Register/>}/>
+            <Route path="login" element={<Login/>}/>
+            <Route path="register" element= {<Register/>}/>
           </Route>
           <Route element={<PrivateRoute/> }>
-            <Route path="/contacts" element={<PhoneBook/>}/>
+            <Route path="contacts" element={<PhoneBook/>}/>
           </Route>
         </Route>
-        <Route path="*" element={<Navigate to='/' replace/>}/>
+        <Route path="*" element={<Navigate to='/phone-book' replace/>}/>
       </Routes>
     </Box>
   );
 };
-
-
-
-

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// import {  BrowserRouter } from 'react-router-dom';
 import {  BrowserRouter } from 'react-router-dom';
+
 
 import { App } from 'components/App';
 
@@ -10,15 +12,39 @@ import { store, persistor} from './redux/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <Provider store={store}>
+//       <PersistGate loading={null} persistor={persistor}>
+//       <BrowserRouter basename="/phone-book">
+//           <App />
+//         </BrowserRouter>
+//       </PersistGate>
+//     </Provider>
+//   </React.StrictMode>
+// );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          < BrowserRouter>
-            <App />
-          </ BrowserRouter>
-        </PersistGate>
-       </Provider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter basename="/phone-book">
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
+
+
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//       <Provider store={store}>
+//         <PersistGate loading={null} persistor={persistor}>
+//           <HashRouter>
+//             <App />
+//           </HashRouter>
+//         </PersistGate>
+//        </Provider>
+//   </React.StrictMode>
+// );

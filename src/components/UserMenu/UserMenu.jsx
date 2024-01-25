@@ -21,7 +21,7 @@ const UserMenu = () =>{
         display='flex'
         >
           <Link
-            href="/contacts"
+            href="/phone-book/contacts"
             color="inherit"
             underline="none"
           >

@@ -3,7 +3,7 @@ import {Box, Link} from '@mui/material';
 const Navigation = () => (
     <Box>
       <Link
-        href="/"
+        href="/phone-book"
         color="inherit"
         underline="none"
         ml={2}
